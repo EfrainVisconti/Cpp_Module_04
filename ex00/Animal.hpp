@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:01:00 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 17:28:16 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/04 20:01:37 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal
     public:
         Animal();
         Animal(std::string const type);
-        ~Animal();
+        virtual ~Animal();
         Animal(const Animal &other); //Copy constructor
         Animal &operator=(const Animal &other); //Copy assignment operator
 

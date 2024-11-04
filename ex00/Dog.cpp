@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:03:04 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 17:24:03 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/04 19:41:16 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Dog   &Dog::operator=(const Dog &other)
     return *this;
 }
 
-void    Cat::makeSound() const
+void    Dog::makeSound() const
 {
     std::cout << "Woofffff" << std::endl;
 }
