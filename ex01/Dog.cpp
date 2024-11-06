@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:34:25 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/06 14:45:57 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/06 16:30:02 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ std::string Dog::getBrainIdeas(const int index) const
     return this->_brain->getIdeas(index);
 }
 
-void	Dog::setBrainIdeas(const std::string new, const int index)
+void	Dog::setBrainIdeas(const std::string idea, const int index) const
 {
-    this->_brain->setIdeas(new, index);
+    this->_brain->setIdeas(idea, index);
 }
