@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:33:54 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/05 02:26:39 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/06 14:46:36 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,14 @@ Cat   &Cat::operator=(const Cat &other)
 void    Cat::makeSound() const
 {
     std::cout << "Meowwwww" << std::endl;
+}
+
+std::string Cat::getBrainIdeas(const int index) const
+{
+    return this->_brain->getIdeas(index);
+}
+
+void	Cat::setBrainIdeas(const std::string new, const int index)
+{
+    this->_brain->setIdeas(new, index);
 }

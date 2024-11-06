@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:38:03 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/05 02:07:38 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/06 14:36:14 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,10 @@ std::string Brain::getIdeas(int index) const
     if (index >= 0 && index < 100)
 		return this->_ideas[index];
 	return "Invalid number";
+}
+
+void	Brain::setIdeas(const std::string new, int index)
+{
+	if (index >= 0 && index < 100)
+		this->_ideas[index] = new;
 }

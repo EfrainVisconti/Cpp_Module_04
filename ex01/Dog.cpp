@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:34:25 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/05 02:28:29 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/06 14:45:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,14 @@ Dog   &Dog::operator=(const Dog &other)
 void    Dog::makeSound() const
 {
     std::cout << "Woofffff" << std::endl;
+}
+
+std::string Dog::getBrainIdeas(const int index) const
+{
+    return this->_brain->getIdeas(index);
+}
+
+void	Dog::setBrainIdeas(const std::string new, const int index)
+{
+    this->_brain->setIdeas(new, index);
 }

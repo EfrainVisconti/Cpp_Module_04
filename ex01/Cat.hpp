@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:34:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 22:42:29 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/06 14:45:12 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ class Cat : public Animal
         Cat(const Cat &other); //Copy constructor
         Cat &operator=(const Cat &other); //Copy assignment operator
         void    makeSound() const;
+
+        std::string getBrainIdeas(const int index);
+        void    setBrainIdeas(const std::string new, const int index);
 };
 
 #endif
