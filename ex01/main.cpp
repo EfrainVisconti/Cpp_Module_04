@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:35:07 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/07 13:53:15 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/07 18:08:08 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Dog.hpp"
 #include "WrongCat.hpp"
 
-#define SIZE 10
+#define SIZE 4
 #define INDEX 0
 const std::string RESET = "\033[0m";
 const std::string GREEN = "\033[32m";
@@ -53,14 +53,14 @@ int main()
         }
     }
     {
-        std::cout << std::endl << GREEN << "-----Deep copies Test-----" << RESET << std::endl;
+        std::cout << std::endl << GREEN << "-----Deep copies test-----" << RESET << std::endl;
         Dog a;
         Dog b;
         std::cout << "Dog 'a' idea 0 before change: " << a.getBrainIdeas(INDEX) << std::endl;
         a.setBrainIdeas("test_idea", INDEX);
         std::cout << "Dog 'a' idea 0 after change: " << a.getBrainIdeas(INDEX) << std::endl;
         b = a;
-        std::cout << "Dog 'b' idea 0 to show deep copy : " << a.getBrainIdeas(INDEX) << std::endl;
+        std::cout << "Dog 'b' idea 0 to show copy: " << a.getBrainIdeas(INDEX) << std::endl;
     }
     return 0;
 }
