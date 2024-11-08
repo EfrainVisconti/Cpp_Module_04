@@ -6,14 +6,14 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:35:51 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 21:35:53 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/08 16:25:48 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGANIMAL_HPP
 # define WRONGANIMAL_HPP
 
-#include <iostream>
+# include <iostream>
 
 class WrongAnimal
 {

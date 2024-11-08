@@ -6,15 +6,15 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:37:43 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/06 16:13:41 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/08 16:25:08 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
 
-#include <iostream>
-#include <sstream>
+# include <iostream>
+# include <sstream>
 
 class Brain
 {

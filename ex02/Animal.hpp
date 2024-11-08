@@ -6,14 +6,14 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:33:20 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/07 18:17:17 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/08 16:26:32 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 
-#include <iostream>
+# include <iostream>
 
 class Animal
 {
