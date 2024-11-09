@@ -6,11 +6,10 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:56:00 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/09 02:06:52 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 02:24:38 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
 #include "Ice.hpp"
 #include "Cure.hpp"
 #include "MateriaSource.hpp"
@@ -34,5 +33,4 @@ int main()
     delete me;
     delete src;
     return 0;
-    system("leaks AMateria");
 }
