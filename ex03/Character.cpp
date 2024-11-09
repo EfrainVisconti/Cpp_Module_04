@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:16:13 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/09 01:06:22 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 01:54:36 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,10 @@ Character   &Character::operator=(const Character &other)
                 delete this->_slot[i];
                 this->_slot[i] = NULL;
             }
-            this->_slot[i] = other._slot[i]->clone();
+            if (other._slot[i] != NULL)
+                this->_slot[i] = other._slot[i]->clone();
+            else
+                this->_slot[i] = NULL;
         }
         if (this->_floor != NULL)
         {
@@ -100,6 +103,7 @@ void    Character::equip(AMateria* m)
         }
     }
     std::cout << "Character " << this->_name << " has a full inventory, cannot add " << m->getType() << std::endl;
+    delete m;
 }
 
 void    Character::unequip(int idx)

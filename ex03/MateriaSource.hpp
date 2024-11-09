@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:20:52 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/09 01:18:38 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 01:46:25 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 # include "IMateriaSource.hpp"
 # include "AMateria.hpp"
+# define SIZE 4
 
 class MateriaSource : public IMateriaSource
 {
     private:
-        AMateria* _materia[4];
+        AMateria* _materia[SIZE];
         
     public:
         MateriaSource();
@@ -27,7 +28,7 @@ class MateriaSource : public IMateriaSource
         MateriaSource(const MateriaSource &other);
         MateriaSource   &operator=(const MateriaSource &other);
 
-        void    learnMateria(AMateria*);
+        void    learnMateria(AMateria *m);
         AMateria*   createMateria(std::string const &type);
 };
 
