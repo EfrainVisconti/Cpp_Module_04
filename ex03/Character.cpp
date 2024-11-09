@@ -6,20 +6,20 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:16:13 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/08 20:32:25 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 01:06:22 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character() : _name("default")
+Character::Character() : _name("default"), _sizeFloor(0), _floor(NULL)
 {
     std::cout << "Character default constructor called" << std::endl;
     for (int i = 0, i < SIZE, i++)
         this->_slot[i] = NULL;
 }
 
-Character::Character(std::string const &name) : _name(name)
+Character::Character(std::string const &name) : _name(name), _sizeFloor(0), _floor(NULL)
 {
     std::cout << "Character constructor called: " << this->_name << std::endl;
     for (int i = 0, i < SIZE, i++)
@@ -32,11 +32,10 @@ Character::~Character()
     for (int i = 0, i < SIZE, i++)
     {
         if (this->_slot[i] != NULL)
-        {
             delete this->_slot[i];
-            this->_slot[i] = NULL;
-        }
     }
+    if (this->_floor != NULL)
+        delete [] this->_floor;
 }
 
 Character::Character(const Character &other)
@@ -59,6 +58,12 @@ Character   &Character::operator=(const Character &other)
                 this->_slot[i] = NULL;
             }
             this->_slot[i] = other._slot[i]->clone();
+        }
+        if (this->_floor != NULL)
+        {
+            delete [] this->_floor;
+            this->_floor = NULL;
+            this->_sizeFloor = 0;
         }
     }
     return *this;
@@ -99,10 +104,17 @@ void    Character::equip(AMateria* m)
 
 void    Character::unequip(int idx)
 {
-    if (idx < 0 || idx >= SIZE)
+    if (idx < 0 || idx >= SIZE || this->_slot[idx] == NULL)
     {
         std::cout << "Invalid idx passed to Character::unequip: " << this->_name << std::endl;
         return ;
     }
-    //finish function and handle materia left in floor
+    this->_sizeFloor++;
+    AMateria** newFloor = new AMateria*[this->_sizeFloor];
+    for (int i = 0; i < this->_sizeFloor - 1; i++)
+        newFloor[i] = this->_floor[i];
+    newFloor[this->_sizeFloor - 1] = this->_slot[idx];
+    this->_slot[idx] = NULL;
+    delete [] this->_floor;
+    this->_floor = newFloor;
 }

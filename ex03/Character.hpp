@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:16:25 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/08 19:59:14 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 00:00:46 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Character : public ICharacter
     private:
         std::string _name;
         AMateria    *_slot[SIZE];
+        int _sizeFloor;
+        AMateria    **_floor;
 
     public:
         Character();
