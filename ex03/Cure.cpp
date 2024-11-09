@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:16:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/08 18:02:59 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 02:13:37 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Cure::~Cure()
     std::cout << "Cure destructor called" << std::endl;
 }
 
-Cure::Cure(const Cure &other)
+Cure::Cure(const Cure &other) : AMateria(other)
 {
     std::cout << "Cure copy constructor called" << std::endl;
     *this = other;

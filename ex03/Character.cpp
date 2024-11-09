@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:16:13 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/09 01:54:36 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 02:17:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 Character::Character() : _name("default"), _sizeFloor(0), _floor(NULL)
 {
     std::cout << "Character default constructor called" << std::endl;
-    for (int i = 0, i < SIZE, i++)
+    for (int i = 0; i < SIZE; i++)
         this->_slot[i] = NULL;
 }
 
-Character::Character(std::string const &name) : _name(name), _sizeFloor(0), _floor(NULL)
+Character::Character(std::string const name) : _name(name), _sizeFloor(0), _floor(NULL)
 {
     std::cout << "Character constructor called: " << this->_name << std::endl;
-    for (int i = 0, i < SIZE, i++)
+    for (int i = 0; i < SIZE; i++)
         this->_slot[i] = NULL;
 }
 
 Character::~Character()
 {
     std::cout << "Character destructor called: " << this->_name << std::endl;
-    for (int i = 0, i < SIZE, i++)
+    for (int i = 0; i < SIZE; i++)
     {
         if (this->_slot[i] != NULL)
             delete this->_slot[i];

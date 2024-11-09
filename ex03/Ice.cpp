@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:19:12 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/08 18:08:09 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/09 02:14:09 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Ice::~Ice()
     std::cout << "Ice destructor called" << std::endl;
 }
 
-Ice::Ice(const Ice &other)
+Ice::Ice(const Ice &other) : AMateria(other)
 {
     std::cout << "Ice copy constructor called" << std::endl;
     *this = other;
