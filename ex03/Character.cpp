@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:16:13 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/09 02:17:40 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/10 12:08:54 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void    Character::equip(AMateria* m)
 {
     if (!m)
 	{
-		std::cout << "Character " << this->_name << "can't equip empty materia" << std::endl;
+		std::cout << "Character " << this->_name << " can't equip empty materia" << std::endl;
 		return ;
 	}
     for (int i = 0; i < SIZE; i++)
