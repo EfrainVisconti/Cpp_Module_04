@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:35:07 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/08 14:43:02 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/10 11:49:52 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ int main()
         b = a;
         std::cout << "Dog 'b' idea 0 to show copy: " << a.getBrainIdeas(INDEX) << std::endl;
     }
+	//Animal test;
     return 0;
 }
